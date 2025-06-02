@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview videos</title>
+    <link rel="stylesheet" href="./page2.css">
+    <link rel="stylesheet" href="./page1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-image: url(./Screenshot\ 2025-02-25\ 161216.png);
+    opacity: 0.5; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* .header{
+    height: 13%;
+    width: 100%;
+
+} */
+.video{
+    height: 87%;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.subdiv{
+    height: 75%;
+    width: 70%;
+}
+.video1{
+    height: 28%;
+    width: 100%;
+    box-shadow: 0px 0px 10px grey;
+    margin: 2%;
+    padding: 1%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.videoimage{
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+    /* margin: 3%; */
+}
+a{
+    text-decoration: none;
+    /* color: black; */
+    margin: 2%;
+}
+a:hover{
+    text-decoration: underline;
+}
+.log-out{
+            display: block;
+            position: relative;
+            /* top: -5px; */
+            right: 20px;
+            height: 20px;
+            width: 60px;
+        }
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="con">
+               <div class="a1"> <h1 class="h1">One Stop</h1></div>
+              <div class="a2"><p class="myP">for jobseekers</p></div>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <!-- <li><a href="#" class="btn sign-up" onclick="signup()">Sign Up</a></li> -->
+                        <li><a href="#" class="btn log-out" onclick="logout()">Log Out</a></li>
+                    </ul>
+                </nav>          
+            </div>
+        </div>
+        <div class="video">
+            <div class="subdiv">
+            <div class="video1">
+                <img class="videoimage" src="https://pilbox.themuse.com/image.png?filter=antialias&h=350&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2Fcommon-interview-questions.png&w=700" alt="image1">
+                <a href="https://youtu.be/Go4GVvcS02Y?si=G7vflOR0rOLnyh0k" target="_blank">Basic interview questions</a>
+            </div>
+            <div class="video1">
+                <img class="videoimage" src="https://www.foundit.in/career-advice/wp-content/uploads/2021/11/basic-interview-questions.jpg" alt="img2">
+                <a href="https://youtu.be/sXeXeLOVWnk?si=ywIK05akStjYK3We" target="_blank">TOP 21 JOB INTERVIEW QUESTIONS AND ANSWERS</a>
+            </div>
+            <div class="video1">
+                <img class="videoimage" src="https://b3649796.smushcdn.com/3649796/wp-content/uploads/2020/04/33-Common-Job-Interview-Questions-To-Help-You-Prepare-Your-Next-Interview-scaled.jpg?lossy=2&strip=1&webp=1" alt="img3">
+                <a href="https://youtu.be/Ji46s5BHdr0?si=2uCbdmhwRUnSC1vu" target="_blank">Top 10 most commonly asked interview questions</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="./page2.js"></script>
+</body>
+</html>

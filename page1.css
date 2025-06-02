@@ -1,0 +1,341 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+/* height: 100%; */
+}
+.maindiv{
+    height: 100vh;
+    overflow: hidden; /* Hides excess content */
+    width: 100%;
+    background-image: url(./job5[1].png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.header{
+    height: 13%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #222; */
+    backdrop-filter: brightness(35%);
+}
+.logo{
+    height: 100%;
+    width: 7%;
+        background-image: url(./Screenshot\ 2025-02-25\ 161216.png);
+        background-size: 100% 100%;
+        border-radius: 50%;
+}
+
+
+.con{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    flex-direction: column;
+}
+.a1,.a2{
+ width: 100%;
+}
+.a1{
+    height: 80%;
+    display: flex;
+    position: relative;
+    left: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 33px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 4px 4px 0px #711500, 8px 8px 0px#ffc478;
+
+}.a2{
+    position: relative;
+    left: 260px;
+    top: 14px;
+    color: white;
+    font-size: 20px;
+    height: 20%;
+    display: flex;
+    align-items: flex-end;justify-content: center;
+}
+
+.myP{
+        font-family: "Dancing Script", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+     
+        /* font-size: 10px;
+    width: 100%;
+    color: white;
+    position: relative;
+    left: 50px; */
+
+}
+
+.menu{
+    height: 100%;
+    width: 25%;
+
+}
+.content{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div1{
+    height: 50%;
+    width: 35%;
+    border: 1px solid black;
+
+}
+
+
+.animated-text {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(63, 28, 28), rgb(125, 15, 159),rgb(5, 102, 129), rgb(84, 15, 84));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 80px;
+    right: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border-right: 3px solid #1d3349; */
+    width: 0;
+    animation: typing 2s steps(30, end) forwards, blink 0.6s infinite step-end;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 60%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+.confetti {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+  /* Basic Reset */
+
+
+/* Navbar styling */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1500px; */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Button Styling */
+.btn {
+    position: relative;
+    left: 120px;
+    top: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sign-up {
+    background-color: #2762e3;
+    color: white;
+    width: auto;
+    position: relative;
+    /* left: 100px; */
+   
+    display: block;
+}
+.sign-up:hover{
+    background-color: #1250cc;
+}
+.log-out {
+    background-color: #f44336;
+    color: white;
+    display: none;
+}
+
+
+.log-out:hover{
+    background-color: #9c162f;
+}
+  
+/* Hover and Active State Animations */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus Animation */
+.btn:focus {
+    outline: none;
+    border: 2px solid #fff;
+}
+
+/* Slide In Animation for Buttons */
+.nav-links li {
+    animation: slideIn 0.5s ease-out;
+}
+
+.nav-links li:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-box {
+    max-width: 300px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#toggle-form,#gs1 {
+    display: inline-block;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-text {
+    margin-top: 10px;
+}
+.div123{
+    height: 50%;
+    width: 28%;
+    display: none;
+}
+
+
+canvas{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <img src=" " >
+img{
+    filter:drop-shadow(10px 10px 10px yellow)
+} */
+
+ /* h1{
+    color: white;
+    text-shadow: 0px 0px 10px cyan,
+    0px 0px 20px cyan,0px 0px 30px cyan,
+    0px 0px 40px cyan;
+ } */

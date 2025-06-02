@@ -1,0 +1,522 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Plans and Ideas</title>
+  <link rel="stylesheet" href="iship.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  background-image: url(./business3.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filters select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.business-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.business-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: none;
+}
+
+.business-card.show {
+  display: block;
+}
+
+.business-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.business-card-content {
+  padding: 20px;
+}
+
+.business-card-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.business-card-content p,
+.business-card-content a {
+  color: #666;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+p{
+    color: white;
+}
+.business-card-content a:hover {
+  text-decoration: underline;
+  color: #007BFF;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Business Plans and Ideas</h1>
+    <p>Select the options to filter business plans and ideas by industry, funding, and stage.</p>
+  </header>
+
+  <div class="filters">
+    <select id="industry" onchange="filterBusinessPlans()">
+      <option value="all">Select Industry</option>
+      <option value="technology">Technology</option>
+      <option value="healthcare">Healthcare</option>
+      <option value="education">Education</option>
+      <option value="finance">Finance</option>
+      <option value="retail">Retail</option>
+      <option value="manufacturing">Manufacturing</option>
+    </select>
+
+    <select id="funding" onchange="filterBusinessPlans()">
+      <option value="all">Select Funding</option>
+      <option value="funded">Funded</option>
+      <option value="seeking">Seeking</option>
+      <option value="bootstrapped">Bootstrapped</option>
+      <option value="crowdfunding">Crowdfunding</option>
+      <option value="angel">Angel Investor</option>
+      <option value="venture">Venture Capital</option>
+    </select>
+
+    <select id="stage" onchange="filterBusinessPlans()">
+      <option value="all">Select Stage</option>
+      <option value="startup">Startup</option>
+      <option value="growth">Growth</option>
+      <option value="idea">Idea</option>
+      <option value="scaling">Scaling</option>
+      <option value="mature">Mature</option>
+      <option value="expansion">Expansion</option>
+    </select>
+  </div>
+
+  <div class="business-container" id="business-plan-list">
+  </div>
+
+  <script>
+    const businessPlans = [
+  {
+    industry: "technology",
+    funding: "funded",
+    stage: "startup",
+    location: "San Francisco",
+    name: "AI Solutions - AI for Healthcare",
+    link: "https://www.bplans.com/education-business-plans/education-technology-business-plans/?utm_source=chatgpt.com"
+  },
+  {
+    industry: "technology",
+    funding: "seeking",
+    stage: "startup",
+    location: "New York",
+    name: "GreenTech - Sustainable Energy Solutions",
+    link: "https://en.wikipedia.org/wiki/Virti?utm_source=chatgpt.com"
+  },
+  {
+    industry: "healthcare",
+    funding: "bootstrapped",
+    stage: "growth",
+    location: "Boston",
+    name: "HealthTech - Wearable Health Devices",
+    link: "https://www.businessinsider.com/charta-health-8-million-seed-round-pitch-deck-2025-2?utm_source=chatgpt.com"
+  },
+  {
+    industry: "healthcare",
+    funding: "funded",
+    stage: "startup",
+    location: "Los Angeles",
+    name: "MedSolutions - Telemedicine Platform",
+    link: "https://appinventiv.com/blog/healthcare-business-ideas-for-startup/?utm_source=chatgpt.com"
+  },
+  {
+    industry: "education",
+    funding: "funded",
+    stage: "idea",
+    location: "Chicago",
+    name: "EduPro - Online Learning Platform",
+    link: "https://www.couriermail.com.au/news/charles-darwin-university-announces-plan-to-open-uk-study-centre/news-story/3e287b20e82729105428be8b3e84ecf9?utm_source=chatgpt.com"
+  },
+  {
+    industry: "education",
+    funding: "seeking",
+    stage: "startup",
+    location: "Seattle",
+    name: "SmartEdu - AI-Powered Education",
+    link: "https://en.wikipedia.org/wiki/BETiC?utm_source=chatgpt.com"
+  },
+  {
+    industry: "finance",
+    funding: "angel",
+    stage: "growth",
+    location: "London",
+    name: "FinTech - Blockchain for Finance",
+    link: "https://www.forbes.com/sites/forbestechcouncil/2024/02/15/how-blockchain-is-reshaping-the-financial-industry/?utm_source=chatgpt.com"
+  },
+  {
+    industry: "retail",
+    funding: "crowdfunding",
+    stage: "scaling",
+    location: "Toronto",
+    name: "ShopNow - E-commerce Platform",
+    link: "https://www.retaildive.com/news/2025-retail-innovations-to-watch/2025-02-02/?utm_source=chatgpt.com"
+  },
+  {
+    industry: "retail",
+    funding: "bootstrapped",
+    stage: "growth",
+    location: "Berlin",
+    name: "RetailX - Smart Retail Technology",
+    link: "https://www.retaildive.com/news/retail-tech-2025-predictions/2025-03-01/?utm_source=chatgpt.com"
+  }
+];
+
+function displayBusinessPlans() {
+  const businessPlanList = document.getElementById("business-plan-list");
+  businessPlanList.innerHTML = ''; 
+
+  businessPlans.forEach(plan => {
+    const card = document.createElement("div");
+    card.classList.add("business-card", plan.industry, plan.funding, plan.stage);
+
+    card.innerHTML = `
+      <div class="business-card-content">
+        <h3>${plan.name}</h3>
+        <p>Industry: ${capitalize(plan.industry)}</p>
+        <p>Funding: ${capitalize(plan.funding)}</p>
+        <p>Stage: ${capitalize(plan.stage)}</p>
+        <p><a href="${plan.link}" target="_blank">More Info</a></p>
+      </div>
+    `;
+
+    businessPlanList.appendChild(card);
+  });
+
+  filterBusinessPlans();
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function filterBusinessPlans() {
+  const industry = document.getElementById("industry").value;
+  const funding = document.getElementById("funding").value;
+  const stage = document.getElementById("stage").value;
+  const cards = document.querySelectorAll(".business-card");
+
+  let anyVisible = false;
+
+  cards.forEach(card => {
+    const matchesIndustry = industry === "all" || card.classList.contains(industry);
+    const matchesFunding = funding === "all" || card.classList.contains(funding);
+    const matchesStage = stage === "all" || card.classList.contains(stage);
+
+    if (matchesIndustry && matchesFunding && matchesStage) {
+      card.classList.add("show");
+      anyVisible = true;
+    } else {
+      card.classList.remove("show");
+    }
+  });
+
+  if (!anyVisible) {
+    document.getElementById("business-plan-list").innerHTML = '<p style="text-align:center;width:100%;">No business plans found for the selected criteria.</p>';
+  }
+}
+
+window.onload = displayBusinessPlans;
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Plans and Ideas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .header {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #222;
+      color: white;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .filters select {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .business-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .business-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .business-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+    .business-card-content h3 {
+      font-size: 1.4rem;
+      color: #333;
+    }
+    .business-card-content p {
+      color: #666;
+      font-size: 1rem;
+    }
+    .business-card-content a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      border-radius: 50%;
+    }
+    #no-business-message {
+      text-align: center;
+      width: 100%;
+      font-size: 1.2rem;
+      color: red;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Business Plans and Ideas</h1>
+  </header>
+
+  <div class="filters">
+    <select id="category" onchange="filterBusinessPlans()">
+      <option value="all">Select Category</option>
+      <option value="tech">Technology</option>
+      <option value="finance">Finance</option>
+      <option value="health">Health</option>
+      <option value="education">Education</option>
+      <option value="retail">Retail</option>
+    </select>
+    <select id="type" onchange="filterBusinessPlans()">
+      <option value="all">Select Type</option>
+      <option value="startup">Startup</option>
+      <option value="expansion">Expansion</option>
+    </select>
+    <select id="investment" onchange="filterBusinessPlans()">
+      <option value="all">Select Investment</option>
+      <option value="low">Low Investment</option>
+      <option value="medium">Medium Investment</option>
+      <option value="high">High Investment</option>
+    </select>
+  </div>
+
+  <div class="business-container" id="business-list">
+    <!-- Business Plan Examples -->
+    <div class="business-card tech startup low">
+      <div class="business-card-content">
+        <h3>AI Software Development</h3>
+        <p>Category: Technology <br> Type: Startup <br> Investment: Low</p>
+        <p><a href="https://www.startupgrind.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card finance expansion medium">
+      <div class="business-card-content">
+        <h3>FinTech Investment Platform</h3>
+        <p>Category: Finance <br> Type: Expansion <br>Investment: Medium</p>
+        <p><a href="https://www.fintechcircle.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card health startup high">
+      <div class="business-card-content">
+        <h3>Health Tech Startup</h3>
+        <p>Category: Health <br>Type: Startup <br>Investment: High</p>
+        <p><a href="https://www.healthtechx.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card education expansion low">
+      <div class="business-card-content">
+        <h3>Online Education Platform</h3>
+        <p>Category: Education <br> Type: Expansion <br>Investment: Low</p>
+        <p><a href="https://www.edtechmagazine.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card retail startup medium">
+      <div class="business-card-content">
+        <h3>Eco-Friendly Retail Store</h3>
+        <p>Category: Retail <br>Type: Startup <br>Investment: Medium</p>
+        <p><a href="https://www.greenretail.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card tech expansion high">
+      <div class="business-card-content">
+        <h3>Blockchain Expansion</h3>
+        <p>Category: Technology <br>Type: Expansion <br>Investment: High</p>
+        <p><a href="https://www.blockchainexpansion.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card finance startup low">
+      <div class="business-card-content">
+        <h3>Peer-to-Peer Lending Platform</h3>
+        <p>Category: Finance <br>Type: Startup <br>Investment: Low</p>
+        <p><a href="https://www.lendacademy.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card health expansion medium">
+      <div class="business-card-content">
+        <h3>Telemedicine Service</h3>
+        <p>Category: Health <br>Type: Expansion <br>Investment: Medium</p>
+        <p><a href="https://www.telemedicinesolutions.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card retail expansion high">
+      <div class="business-card-content">
+        <h3>Luxury Retail Chain</h3>
+        <p>Category: Retail, Type: Expansion <br>Investment: High</p>
+        <p><a href="https://www.luxuryretail.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card education startup low">
+      <div class="business-card-content">
+        <h3>Language Learning App</h3>
+        <p>Category: Education <br>Type: Startup <br>Investment: Low</p>
+        <p><a href="https://www.languagelearningapp.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card tech startup medium">
+      <div class="business-card-content">
+        <h3>Mobile App Development</h3>
+        <p>Category: Technology <br>Type: Startup <br>Investment: Medium</p>
+        <p><a href="https://www.appdevelopment.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card finance expansion low">
+      <div class="business-card-content">
+        <h3>Investment Advisory Firm</h3>
+        <p>Category: Finance <br> Type: Expansion <br>Investment: Low</p>
+        <p><a href="https://www.investmentadvisoryfirm.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+    <div class="business-card retail startup high">
+      <div class="business-card-content">
+        <h3>High-End Fashion E-Commerce</h3>
+        <p>Category: Retail <br>Type: Startup <br>Investment: High</p>
+        <p><a href="https://www.highendfashion.com/" target="_blank">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterBusinessPlans() {
+      const category = document.getElementById("category").value.toLowerCase();
+      const type = document.getElementById("type").value.toLowerCase();
+      const investment = document.getElementById("investment").value.toLowerCase();
+      const businessPlans = document.querySelectorAll(".business-card");
+      
+      let found = false;
+
+      businessPlans.forEach(plan => {
+          const matchesCategory = category === "all" || plan.classList.contains(category);
+          const matchesType = type === "all" || plan.classList.contains(type);
+          const matchesInvestment = investment === "all" || plan.classList.contains(investment);
+
+          if (matchesCategory && matchesType && matchesInvestment) {
+              plan.style.display = "block";
+              found = true;
+          } else {
+              plan.style.display = "none";
+          }
+      });
+
+      // Handle "No Business Plans Found" message
+      const messageId = "no-business-message";
+      let messageElement = document.getElementById(messageId);
+
+      if (!found) {
+          if (!messageElement) {
+              messageElement = document.createElement("p");
+              messageElement.id = messageId;
+              messageElement.innerText = "No business plans found for the selected criteria.";
+              document.getElementById("business-list").appendChild(messageElement);
+          }
+      } else {
+          if (messageElement) {
+              messageElement.remove(); // Remove message if plans are found
+          }
+      }
+    }
+  </script>
+
+</body>
+</html>

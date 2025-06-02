@@ -1,0 +1,450 @@
+
+ <html>
+    <head>
+        <title>Resume Page</title>
+        <link rel="stylesheet" href="./page1.css">
+        <link rel="stylesheet" href="page2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./page1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./page1.css">
+<link rel="stylesheet" href="./page2.css">
+
+        <style>
+
+            body{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-image: url(./WhatsApp\ Image\ 2025-03-02\ at\ 22.29.19_f3bc10b0.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .box{
+                margin-top: 20px;
+                height: 70%;
+                width: 30%;
+                border: 2px solid black;
+                border-radius: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                /* transform: scale(1,1.1); */
+                animation: box1 0.8s linear alternate infinite;
+                
+            }
+            @keyframes box1{
+                from{
+
+                }
+                to{
+                 transform: scale(1.01);
+                }
+            }
+
+            .up{
+                height: 90%;
+                width: 100%;
+                background-image: url(./Sample\ Resume1.jpg);
+                border-radius: 20px 20px 0px 0px;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .down{
+                height: 10%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .hover-color-change{
+                padding: 10px 20px;
+                font-size: 16px;
+                background: linear-gradient(to right,darkblue, #3498db, skyblue); /* Initial gradient */
+                color: white;
+                border: 2px solid transparent;
+                border-radius: 5px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                transition: color 0.3s ease;
+                font-weight: 600;
+                font-family: "Lobster", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                animation: pulse 2s infinite;
+                transition: transform 0.3s ease;
+        }
+            
+            @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .hover-color-change:hover{
+                cursor: pointer;
+                color: #fff;
+                animation: pulse 2s infinite;
+            }
+        .hover-color-change::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: darkblue;
+            transition: all 0.6s ease;
+        }
+
+        .hover-color-change:hover::before {
+            left: 100%; 
+        }
+
+        body{
+    margin: 0px;
+    padding: 0px;
+
+}
+.maindiv{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./job5[1].png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.header{
+    height: 13%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #222; */
+    backdrop-filter: brightness(35%);
+}
+.logo{
+    height: 100%;
+    width: 7%;
+        background-image: url(./Screenshot\ 2025-02-25\ 161216.png);
+        background-size: 100% 100%;
+        border-radius: 50%;
+}
+
+
+.con{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    flex-direction: column;
+}
+.a1,.a2{
+ width: 100%;
+}.a1{
+    height: 80%;
+    display: flex;
+    position: relative;
+    left: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 4px 4px 0px #711500, 8px 8px 0px #ffbd69;
+
+}.a2{
+    position: relative;
+    left: 260px;
+    top: 12px;
+    color: white;
+    height: 20%;
+    display: flex;
+    align-items: flex-end;justify-content: center;
+}
+
+.myP{
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.menu{
+    height: 100%;
+    width: 25%;
+
+}
+.content{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div1{
+    height: 50%;
+    width: 35%;
+    border: 1px solid black;
+
+}
+
+
+.animated-text {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(63, 28, 28), rgb(125, 15, 159),rgb(5, 102, 129), rgb(84, 15, 84));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 80px;
+    right: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* border-right: 3px solid #1d3349; */
+    width: 0;
+    animation: typing 2s steps(30, end) forwards, blink 0.6s infinite step-end;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 60%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+.confetti {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+  /* Basic Reset */
+
+
+/* Navbar styling */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1500px; */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Button Styling */
+.btn {
+    position: relative;
+    left: 120px;
+    top: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sign-up {
+    background-color: #2762e3;
+    color: white;
+    width: auto;
+    position: relative;
+    /* left: 100px; */
+   
+    display: block;
+}
+.sign-up:hover{
+    background-color: #1250cc;
+}
+.log-out {
+    background-color: #f44336;
+    color: white;
+    display: none;
+}
+
+
+.log-out:hover{
+    background-color: #9c162f;
+}
+  
+/* Hover and Active State Animations */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus Animation */
+.btn:focus {
+    outline: none;
+    border: 2px solid #fff;
+}
+
+/* Slide In Animation for Buttons */
+.nav-links li {
+    animation: slideIn 0.5s ease-out;
+}
+
+.nav-links li:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-box {
+    max-width: 300px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#toggle-form,#gs1 {
+    display: inline-block;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-text {
+    margin-top: 10px;
+}
+.div123{
+    height: 50%;
+    width: 28%;
+    display: none;
+}.log-out{
+            display: block;
+            position: relative;
+            /* top: -5px; */
+            right: 20px;
+        }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo"></div>
+            <div class="con">
+               <div class="a1"> <h1 class="h1">One Stop</h1></div>
+              <div class="a2"><p class="myP">for jobseekers</p></div>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <!-- <li><a href="#" class="btn sign-up" onclick="signup()">Sign Up</a></li> -->
+                        <li><a href="#" class="btn log-out" onclick="logout()">Log Out</a></li>
+                    </ul>
+                </nav>          
+            </div>
+        </div>
+        <div class="box">
+            <div class="up"></div>
+            <div class="down">
+               <a href="https://www.resumemate.io/resume-builder?utm_source=linkedin&utm_medium=social&utm_campaign=dar" target="_blank"> <button  class="hover-color-change" onclick="myfun()">Create Resume</button></a>
+            </div>
+        </div>
+        <script >
+             document.getElementById("editButton").addEventListener("click", function() {
+        let inputs = document.querySelectorAll("input");
+        inputs.forEach(input => input.disabled = false);
+             });
+        </script>
+        <script src="./page2.js"></script>
+    </body>
+</html>

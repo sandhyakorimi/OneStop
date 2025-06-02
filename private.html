@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Job Portals</title>
+   <link rel="stylesheet" href="./page1.css">
+   <link rel="stylesheet" href="./page1.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="./page2.css"> -->
+    <style>
+        body{
+            margin: 0px;
+            padding: 0;
+        }
+        .main {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            background-image: url(./res4.jpg);
+            background-size: 100% 100%;
+            height: 100vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .contain {
+            /* max-width: 600px;  */
+            height: 87%;
+            width: 100%;
+            margin: auto;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+        .my{
+            height: 87%;
+            width: 35%;
+            margin: auto;
+            /* background: white; */
+            backdrop-filter: brightness(40%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+           
+        }
+        h1 {
+            color: #ffffff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background: #e3f2fd;
+            transition: background 0.3s, transform 0.3s;
+        }
+        a:hover {
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        p{
+            color: white;
+        }
+        .log-out{
+            display: block;
+            position: relative;
+            top: -10px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="con">
+               <div class="a1"> <h1 class="h1">One Stop</h1></div>
+              <div class="a2"><p class="myP">for jobseekers</p></div>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <!-- <li><a href="#" class="btn sign-up" onclick="signup()">Sign Up</a></li> -->
+                        <li><a href="#" class="btn log-out" onclick="logout()">Log Out</a></li>
+                    </ul>
+                </nav>          
+            </div>
+        </div>
+    <div class="contain">
+        <div class="my">
+        <h1>Private Job Portals</h1>
+        <p>Click on the links below to explore the latest private job listings:</p>
+        <ul>
+            <li><a href="https://www.naukri.com" target="_blank" >Naukri</a></li>
+            <li><a href="https://www.indeed.com"target="_blank" >Indeed India</a></li>
+            <li><a href="https://www.shine.com"target="_blank">Shine</a></li>
+            <li><a href="https://www.timesjobs.com" target="_blank">TimesJobs</a></li>
+            <li><a href="https://www.foundit.in" target="_blank">Monster India (Foundit)</a></li>
+            <li><a href="https://www.glassdoor.co.in" target="_blank">Glassdoor India</a></li>
+            <li><a href="https://www.jobvision.in" target="_blank">JobVision</a></li>
+        </ul>
+    </div></div>
+</div>
+<script src="./page1.js"></script>
+<script src="./page2.js"></script>
+</body>
+</html>

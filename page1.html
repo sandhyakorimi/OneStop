@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Stop</title>
+    <link rel="stylesheet" href="./page1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="maindiv">
+        <div class="header">
+
+            <div class="logo"></div>
+            <div class="con">
+               <div class="a1"> <h1 class="h1">One Stop</h1></div>
+              <div class="a2"><p class="myP">for jobseekers</p></div>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="#" class="btn sign-up" onclick="signup()" >Sign Up</a></li>
+                        <li><a href="#" class="btn log-out" onclick="logout()" >Sign Out</a></li>
+                    </ul>
+                </nav>          
+            </div>
+        </div>
+     <!-- <canvas id = "canvas"> </canvas> -->
+
+        <div class="content">
+            <div class="di"></div>
+     <!-- <canvas id = "canvas"> </canvas> -->
+            <div class="animated-text">Top job listings, all in one spot!</div>
+            <div class="div123">
+                <div class="container">
+                    <div class="form-box">
+                        <h2 id="form-title">Login</h2>
+                        <form id="auth-form">
+                            <div class="input-group">
+                                <input type="text" id="username" placeholder="Username" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="password" placeholder="Password" required>
+                            </div>
+                            <div class="input-group" id="confirm-password-group" style="display: none;">
+                                <input type="password" id="confirm-password" placeholder="Confirm Password">
+                            </div>
+                          <button type="submit" id="submit-btn" onclick="newpage()" >Login</button>
+                            <p class="toggle-text"> <span id="gs1">Don't have an account?</span> <a href="#" id="toggle-form">Sign Up</a></p>
+                        </form>
+                    </div></div></div>
+    
+        </div>
+    </div>
+    <script src="./page1.js"></script>
+</body>
+</html>
